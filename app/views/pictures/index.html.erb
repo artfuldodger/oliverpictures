@@ -1,0 +1,7 @@
+<% @pictures.each do |picture| %>
+  <div class="picture">
+    <%= link_to picture do %>
+      <%= image_tag picture.image %>
+    <% end %>
+  </div>
+<% end %>
