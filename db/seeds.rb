@@ -1,4 +1,5 @@
-pictures = Dir[Rails.root.join('db/seeds/pictures/*')]
+pictures = Dir[Rails.root.join('public/images/*')]
+Picture.destroy_all
 pictures.each do |picture|
-  Picture.create(image: File.open(picture))
+  Picture.create(public_path: File.basename(picture))
 end
