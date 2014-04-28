@@ -1,3 +1,10 @@
 <div class="picture">
   <%= image_tag @picture.image %>
 </div>
+
+<div class="comments">
+  <h2>Comments</h2>
+  <%= render 'comments/comments', comments: @picture.comments %>
+
+  <%= render 'comments/form', picture: @picture, comment: @comment %>
+</div>
